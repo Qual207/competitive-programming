@@ -21,7 +21,6 @@ int main()
 		n = unique(nums.begin(), nums.end()) - nums.begin();
 
 		long long ans = n;
-
 		for(int i=0; i+2<n; i++)
 		{
 			// basically subtracting the "middle" terms from the path where it's all increasing / decreasing
@@ -33,7 +32,6 @@ int main()
 		t--;
 	}
 }
-
 
 /*
 -----------------------------------------------------
