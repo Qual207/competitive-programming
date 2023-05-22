@@ -1,3 +1,8 @@
+// My solution is basically the same as the intended solution, however I implemented it differently than USACO Guide. 
+// The Guide solution searches through all sets of 2 characteristics, checking if a cow has A and ! B and another cow has B and !A and then if another cow has A & B
+// My solution looks at each cow with multiple characteristics (AB...) and then checks if there are any single cows with A and any single cows with B, thus I kind of
+// "cheesed" the problem since I somehow got lucky in assuming that the cows with A!B and B!A will only have one trait (either A or B).
+
 #include <bits/stdc++.h>
 
 using namespace std;
