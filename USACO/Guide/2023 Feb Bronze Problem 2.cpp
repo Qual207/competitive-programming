@@ -12,6 +12,7 @@ vector<vector<char>> stamp2(20, vector<char>(20));
 vector<vector<char>> stamp3(20, vector<char>(20));
 vector<vector<char>> stamp4(20, vector<char>(20));
 
+// boolean function to basically check if placing the stamp at the spot (a,b) is valid (won't mess up the desired picture)
 bool compare(int a, int b, vector<vector<char>> stampInput)
 {
     for(int p=a; p<a+k; p++)
@@ -27,6 +28,7 @@ bool compare(int a, int b, vector<vector<char>> stampInput)
     return true;
 }
 
+// rotation function that rotates stamp once, copied from my code for transformations
 void rotate()
 {
     for(int x=0; x<k; x++)
@@ -36,6 +38,8 @@ void rotate()
             stamp[y][k-1-x] = dupl[x][y];
         }
     }
+    
+    // have to actually update the dupl, otherwise you will only be able to get one rotation instead of constantly rotating on the current stamp
     for(int x=0; x<k; x++)
     {
         for(int y=0; y<k; y++)
@@ -73,6 +77,7 @@ int main()
             }
         }
 
+        // really nice idea of initially rotating the stamp 3 times and storing all 4 stamps
         for(int i=0; i<k; i++)
         {
             for(int j=0; j<k; j++) stamp1[i][j] = stamp[i][j];
@@ -96,6 +101,8 @@ int main()
             for(int j=0; j<k; j++) stamp4[i][j] = stamp[i][j];
         }
 
+        // loop through all possible places to put the stamp in, check if its possible to place each rotated stamp in
+        // if it is possible, then just implement the stamp
         for(int i=0; i<=n-k; i++)
         {
             for(int j=0; j<=n-k; j++)
@@ -143,6 +150,7 @@ int main()
             }
         }
 
+        //final test to see if, after doing every possible stamping allowed, the current stamp equals the desired one
         bool ult = true;
         for(int i=0; i<n; i++)
         {
