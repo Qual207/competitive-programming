@@ -1,7 +1,8 @@
 /*
 Notes: The main reason I solved this (very quickly) is because I had done a very similar problem before (The Castle from USACO Training Pages), however I did this problem a 
 while ago so I'm glad I was able to remember it so vividly. I initially had errors when submitting, but that was because I forgot to only run the DFS on values of the table
-that are NOT EQUAL to 0 (I had to see the solution for realizing this part). Also in the very beginning I forgot to mark the cells as visited after visiting them. I'm glad 
+that are NOT EQUAL to 0 (I had to see the solution for realizing this part). This does matter because the 0s could basically serve as "connecting" points between two actual
+"lakes". Also in the very beginning I forgot to mark the cells as visited after visiting them. I'm glad 
 that I spotted the idea to this problem relatively quickly however. 
 
 */
