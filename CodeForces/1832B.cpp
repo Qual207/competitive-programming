@@ -11,7 +11,8 @@ brute forcable middle section.
 Maybe a better thinking process: After trying the case: "6 2 - 15 22 12 10 13 11", we realize that greedy does not work, which means there has to be a good brute force
 approach rather than some specific solution. But, the most basic brute force approach is to try all 2^k combinations right? But after thinking about all these combinations 
 more, we realize that we can shorten this by noticing how removing 2 min and then 1 max is the same as removing 1 max and then 2 min which means that every single combination
-can be limited to how many times a maximum was taken away versus how many times "2 minimums" were taken away.
+can be limited to how many times a maximum was taken away versus how many times "2 minimums" were taken away. Also just picking up on how there are only "so" many combinations
+to test for each case. 
 */
 
 #include <bits/stdc++.h>
