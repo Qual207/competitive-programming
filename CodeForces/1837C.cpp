@@ -13,6 +13,14 @@ example, if we have the sequence "??10??" we want to make this "111000" that way
 take any number of consecutive "0's" or "1's" and just treat them as a single "0" or "1". Thus, logically we realize that we can just make each question mark the same value 
 as the previous value since this will only add to the giant "11...1100...00" block or just not do anything. 
 
+Also this solution works if you set each "?" to be equal to the value right after it (following the same logic as before). I implemented it this way and also got AC. 
+
+Actually, here's a better way to summarize the approach (maybe a new solution). If we look at the sample case: "0?1?10?10" we can think of the "barebone" or "skeletal" form 
+of this sequence to be the sequence without any "?" meaning it would become "0 1 10 10". Also, any consecutive numbers can be grouped as one since whenever we reverse the numbers
+we're automatically gonna group them together. So the sequence becomes "0 1 0 1 0" and this is the optimal sequence and tells us the minimum cost. This also leads us to realize
+that with whatever value we substitute for "?", it can only require us to add another operation or not do anything (it will never reduce the number of operations required 
+since the minimum number of operations is already set from all the numbers outside of the question marks). So we just want the "?" to not do anything and thus we make them 
+equal to either the number before or after it that way it can just be grouped with that number and have no affect on the total number of operations.
 */
 
 #include <bits/stdc++.h>
