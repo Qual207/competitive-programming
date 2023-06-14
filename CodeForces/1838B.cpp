@@ -13,6 +13,10 @@ If we have "6 7 1 3 2 4 5" I was trying to think of a way to remove "1" out of t
 thinking about moving 1 out, I should have thought about what to move IN. If I moved 7 IN to this permutation, where would I put it? I want to put in such a way that none
 of the permutations in "1 3 2 4 5" can exist. The best way to do this is if I move 7 IN between the "1" and "2", because now the 1 and 2 are "cutoff" from any permutation 
 of size less than "n". 
+
+Also could think like this: every permutation has to have 1 and 2 in it. But also, consider now the positions of 1 and 2. Every permutation will have to have every single
+number located between the 1 and 2 (and then maybe some additional numbers). So if you put the number "n" in between 1 and 2, it automatically makes every permutation invalid
+because each subarray would have "n" in it which can't be possible unless the permutation has size "n".
 */
 
 #include <bits/stdc++.h>
