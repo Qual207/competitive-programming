@@ -6,9 +6,31 @@ is always in the form "WWW...WBBB...B" where all the W chars are on the left and
 operations it will take for the W to reach the left. However, you have to add in to account the previous W's because they will already take up spots on the left.
 
 Actually now that I think about it, I had the exact same solution as the intended one except I thought in terms of how many "B" chars there were and so I implemented 
-differently and it was harder. 
+differently and it was harder. UPDATE: after thinking about this more, my solution is actually even more simpler if I just implemented it better. I've now commented out the
+original solution because I like my code better lol.
 */
 
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	string s;
+	cin >> s;
+
+	long long count = 0;
+	long long bCount = 0;
+	for(int i=0; i<s.length(); ++i)
+	{
+		if(s[i]=='B') bCount++;
+		else count += bCount;
+	}
+
+	cout << count << "\n";
+}
+
+/*
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -31,3 +53,4 @@ int main()
 
 	cout << count << "\n";
 }
+*/
